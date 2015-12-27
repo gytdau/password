@@ -1,0 +1,19 @@
+.top-bar {
+  background-color: #E91E63;
+  color: white;
+  font-size: 40px;
+  padding: 40px;
+  text-align: center; }
+
+* {
+  font-family: "Muli", "Roboto", "Helvetica", "Arial", sans-serif !important; }
+
+.panel-ingredient {
+  font-size: 20px;
+  color: #666; }
+
+.high {
+  color: #880E4F;
+  padding: 0 10px;
+  border: 1px solid #EEE;
+  font-family: monospace !important; }
