@@ -1,11 +1,15 @@
-possibleIngredients = [ingredientFirstLetter, ingredientLastLetter, ingredientNumbers, ingredientLetter];
-unusedIngredients = possibleIngredients;
+
+function possibleIngredientList() {
+    return [ingredientFirstLetter, ingredientLastLetter, ingredientNumbers, ingredientLetter];
+}
 
 function generatePassword() {
+    clearRecipe();
+    unusedIngredients = possibleIngredientList();
     for(i = 1; i < 4; i++) {
         addToRecipe(makeIntoSentence(generateIngredient(), i))
     }
-    unusedIngredients = possibleIngredients;
+
 }
 
 function ingredientFirstLetter() {
@@ -55,6 +59,10 @@ function makeIntoSentence(text, number) {
 
 function addToRecipe(text) {
     $("#password-area").append("<div class='panel panel-default'> <div class='panel-body panel-ingredient'>" + text + "</div> </div>")
+}
+
+function clearRecipe() {
+    $("#password-area").html("");
 }
 
 $(function() {
