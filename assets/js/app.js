@@ -1,12 +1,12 @@
 
 function possibleIngredientList() {
-    return [ingredientFirstLetter, ingredientLastLetter, ingredientNumbers, ingredientLetter];
+    return [ingredientFirstLetter, ingredientLastLetter, ingredientNumbers, ingredientLetter, ingredientWord];
 }
 
 function generatePassword() {
     clearRecipe();
     unusedIngredients = possibleIngredientList();
-    for(i = 1; i < 4; i++) {
+    for(i = 1; i < 5; i++) {
         addToRecipe(makeIntoSentence(generateIngredient(), i))
     }
 
@@ -36,6 +36,11 @@ function ingredientLetter() {
     var possible = "ABCDEFGHJKLMNOPQRSTUVWXYZ";
     return "the letter <span class='high'>" + possible.charAt(Math.floor(Math.random() * possible.length)) + "</span>"
 }
+
+function ingredientWord() {
+    return "the word <span class='high'>" + words[Math.floor(Math.random() * words.length)] + "</span>";
+}
+
 
 function generateIngredient() {
     var indexChosen = Math.floor(Math.random()*unusedIngredients.length);
